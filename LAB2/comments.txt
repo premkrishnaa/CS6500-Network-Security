@@ -1,0 +1,1 @@
+The assignment was a bit lengthy but it helped in understanding the openssl library in a better way

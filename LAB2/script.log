@@ -1,0 +1,246 @@
+Script started on Sunday 10 September 2017 06:29:19 PM IST
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ls
+comments.txt  input100KB.txt  lab2.c  Lab2.pdf  makefile  public.txt  README.md  script.log  time.txt  users.txt
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make
+gcc -w -o lab2 lab2.c -L/usr/local/lib -lssl -lcrypto
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 CreateKeys users.txt 
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ls
+abishek_priv.txt  ayush_priv.txt  comments.txt    krishnaa_priv.txt  Lab2.pdf          partha_priv.txt  public.txt  users.txt        venkat_pub.txt
+abishek_pub.txt   ayush_pub.txt   gowri_priv.txt  krishnaa_pub.txt   makefile          partha_pub.txt   README.md   vader_priv.txt
+alice_priv.txt    bob_priv.txt    gowri_pub.txt   [0m[01;32mlab2[0m               mallory_priv.txt  prem_priv.txt    script.log  vader_pub.txt
+alice_pub.txt     bob_pub.txt     input100KB.txt  lab2.c             mallory_pub.txt   prem_pub.txt     time.txt    venkat_priv.txt
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ cat users.txt 
+prem
+krishnaa
+venkat
+abishek
+partha
+gowri
+ayush
+alice
+bob
+mallory
+vader]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./[K[Kcat users.txt ls[K./lab2 CreateKeys users.txt make[K[2Pls./lab2 ReadMail COAI alice bob out10KB.txt alt sha1 des3[12@CreateMail COAI alice bob input10KB.txt out10KB.tx[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[45Pdiff alt input10KB.txt ./lab2 CreateMail COAI alice bob input10KB.txt out10KB.txt sha1 des3[C[C[1P[1P[1@N[1@F[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@0[C[C[C[C[C[C[C[C[C[C[C[C[C[1@0[C[C[C[C[C[C[C[1P[1P[1P[1@b[1@i[1@n[C[C[C[C[C[C[C[C[C[C[K[K[K[Kaes-128-ecb
+bob_pub.txt
+aes
+256
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ls -l out100KB.bin 
+-rw-rw-r-- 1 prem prem 133701 Sep 10 18:30 out100KB.bin
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ls -l out100KB.bin ./lab2 CreateMail CONF alice bob input100KB.txt out100KB.bin sha1 aes-128-ecb[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[1@ [1@R[1@e[1@a[1@d[1@M[1@a[1@i[1@l[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[1@ [1@a[1@l[1@t[1@.[1@t[1@x[1@t[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+bob_priv.txt
+aes
+16
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ls -l alt.txt 
+-rw-rw-r-- 1 prem prem 100000 Sep 10 18:31 alt.txt
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ diff alt.txt input100KB.txt 
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ diff alt.txt input100KB.txt [14Pls -l alt[C[C[C[C[C./lab2 ReadMail CONF alice bob out100KB.bin alt.txt sha1 aes-128-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l out100KB.bin [K./lab2 CreateMail CONF alice bob input100KB.txt out100KB.bin sha1 aes-128-ecb[K[K[K[K[K[K[K[K[K[K[Kdes3
+bob_pub.txt
+des3
+256
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 CreateMail CONF alice bob input100KB.txt out100KB.bin sha1 des3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[42Pdiff alt.txt input100KB.txt [14Pls -l alt[C[C[C[C[C./lab2 ReadMail CONF alice bob out100KB.bin alt.txt sha1 aes-128-ecb[K[K[K[K[K[K[K[K[K[K[Kdes3
+bob_priv.txt
+des3
+24
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 ReadMail CONF alice bob out100KB.bin alt.txt sha1 des3[9@CreateMail CONF alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[42Pdiff alt.txt input100KB.txt [14Pls -l alt[C[C[C[C[C[14@diff alt.txt input100KB[C[C[C[C[C
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ diff alt.txt input100KB.txt [Kmae[Kke cal[K[Klean
+rm lab2 alt.txt out100KB.bin
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make
+gcc -w -o lab2 lab2.c -L/usr/local/lib -lssl -lcrypto
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make cleandiff alt.txt input100KB.txt ./lab2 ReadMail CONF alice bob out100KB.bin alt.txt sha1 des3[9@CreateMail CONF alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[K[K[K[Kbf-ecb
+bob_pub.txt
+bf
+256
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 CreateMail CONF alice bob input100KB.txt out100KB.bin sha1 bf-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake[K cleandiff alt.txt input100KB.txt ./lab2 ReadMail CONF alice bob out100KB.bin alt.txt sha1 des3[K[K[K[Kbf-ecb
+bob_priv.txt
+bf
+16
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ diff alt.txt input100KB.txt 
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ diff alt.txt input100KB.txt ./lab2 ReadMail CONF alice bob out100KB.bin alt.txt sha1 bf-ecb[9@CreateMail CONF alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1@A[1@U[1@I[1@N[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+AUIN
+alice_priv.txt
+256
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 CreateMail AUIN alice bob input100KB.txt out100KB.bin sha1 bf-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[44Pdiff alt.txt input100KB.txt ./lab2 ReadMail CONF alice bob out100KB.bin alt.txt sha1 bf-ecb[C[1P[1P[1P[1P[1@a[1@u[1@i[1P[1P[1P[1@A[1@U[1@I[1@N[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+AUIN
+alice_pub.txt
+20
+Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ now lets change some part of message[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K./lab2 ReadMail AUIN alice bob out100KB.bin alt.txt sha1 bf-ecb
+AUIN
+alice_pub.txt
+20
+Authentication & Integrity failed :(
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ back to m[Knormal[K[K[K[K[K[K[K[K[K[K[K[K[K[K./lab2 ReadMail AUIN alice bob out100KB.bin alt.txt sha1 bf-ecb
+AUIN
+alice_pub.txt
+20
+Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ now lets cahng[K[K[K[Khange the hash[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K./lab2 ReadMail AUIN alice bob out100KB.bin alt.txt sha1 bf-ecb
+AUIN
+alice_pub.txt
+-1
+Error, aborting!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ree[Kset[K[K[K[K[K./lab2 ReadMail AUIN alice bob out100KB.bin alt.txt sha1 bf-ecb
+AUIN
+alice_pub.txt
+20
+Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 ReadMail AUIN alice bob out100KB.bin alt.txt sha1 bf-ecb[9@CreateMail AUIN alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[44Pdiff alt.txt input100KB.txt ./lab2 CreateMail AUIN alice bob input100KB.txt out100KB.bin sha1 bf-ecb[1P bf-ecb2 bf-ecb5 bf-ecb6 bf-ecb[C[C[C[C[C[C[C
+AUIN
+alice_priv.txt
+256
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 CreateMail AUIN alice bob input100KB.txt out100KB.bin sha256 bf-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11PReadMail AUIN alice bob out100KB.bin alt.txt sha1[C[C[C[C[C[C[C[C[1P bf-ecb2 bf-ecb5 bf-ecb6 bf-ecb
+AUIN
+alice_pub.txt
+32
+Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 ReadMail AUIN alice bob out100KB.bin alt.txt sha256 bf-ecb[9@CreateMail AUIN alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1@C[1@O[1@A[1@I[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P bf-ecb[1P bf-ecb[1P bf-ecb1 bf-ecb[C[C[C[C[C[C[C
+bob_pub.txt
+alice_priv.txt
+256
+256
+bf
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 CreateMail COAI alice bob input100KB.txt out100KB.bin sha1 bf-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7PReadMail AUIN alice bob out100KB.bin alt.txt sha256[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1@C[1@O[1@A[1@I[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P bf-ecb[1P bf-ecb[1P bf-ecb1 bf-ecb[C[C[C[C[C[C[C
+bob_priv.txt
+alice_pub.txt
+16
+bf
+20
+Confidentiality, Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ diff alt.txt input100KB.txt 
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ now lets change message[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdiff alt.txt input100KB.txt ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 bf-ecb
+bob_priv.txt
+alice_pub.txt
+16
+bf
+20
+Confidentiality, Authentication & Integrity failed :(
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ lets change hash[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 bf-ecb
+bob_priv.txt
+alice_pub.txt
+-1
+Error, aborting!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ normal[K[K[K[K[K[K./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 bf-ecb
+bob_priv.txt
+alice_pub.txt
+16
+bf
+20
+Confidentiality, Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make clean
+rm lab2 alt.txt out100KB.bin
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make clean./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 bf-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[35Pdiff alt.txt input100KB.txt ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 bf-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake clean[K[Kmake
+gcc -w -o lab2 lab2.c -L/usr/local/lib -lssl -lcrypto
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make clean./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 bf-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[35Pdiff alt.txt input100KB.txt ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 bf-ecb[9@CreateMail COAI alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K des3
+bob_pub.txt
+alice_priv.txt
+256
+256
+des3
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 CreateMail COAI alice bob input100KB.txt out100KB.bin sha1 des3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake[K clean./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 bf-ecb[K[K[K[K[K[Kdes3
+bob_priv.txt
+alice_pub.txt
+16
+des3
+20
+Confidentiality, Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 des3[9@CreateMail COAI alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9PReadMail COAI alice bob out100KB.bin alt.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kdiff alt.txt out100KB.bin [K[K[K[K[K[K[K[K[K[K[K[K[K[K input100KB.txt 
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make clean
+rm lab2 alt.txt out100KB.bin
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make
+gcc -w -o lab2 lab2.c -L/usr/local/lib -lssl -lcrypto
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make cleandiff alt.txt input100KB.txt ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 des3[9@CreateMail COAI alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K aes-128-3c[K[Kecb
+bob_pub.txt
+alice_priv.txt
+256
+256
+aes
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 CreateMail COAI alice bob input100KB.txt out100KB.bin sha1 aes-128-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake[K cleandiff alt.txt input100KB.txt ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 des3[K[K[K[Kaes-128-ecb
+bob_priv.txt
+alice_pub.txt
+16
+aes
+20
+Confidentiality, Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ diff alt.txt input100KB.txt 
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ diff alt.txt input100KB.txt ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 aes-128-ecb[9@CreateMail COAI alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P aes-128-ecb2 aes-128-ecb5 aes-128-ecb6 aes-128-ecb[C[C[C[C[C[C[C[C[C[C[C[C
+bob_pub.txt
+alice_priv.txt
+256
+256
+aes
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 CreateMail COAI alice bob input100KB.txt out100KB.bin sha256 aes-128-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[51Pdiff alt.txt input100KB.txt ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha1 aes-128-ecb[9@CreateMail COAI alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9PReadMail COAI alice bob out100KB.bin alt.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P aes-128-ecb2 aes-128-ecb5 aes-128-ecb6 aes-128-ecb
+bob_priv.txt
+alice_pub.txt
+16
+aes
+32
+Confidentiality, Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ diff l[Kalt.txt input100KB.txt 
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make clean 
+rm lab2 alt.txt out100KB.bin
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make
+gcc -w -o lab2 lab2.c -L/usr/local/lib -lssl -lcrypto
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make clean [17@diff alt.txt input100KB.txt[C./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha256 aes-128-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9@CreateMail COAI alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[Kdes3
+bob_pub.txt
+alice_priv.txt
+256
+256
+des3
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 CreateMail COAI alice bob input100KB.txt out100KB.bin sha256 des3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake[K clean [17@diff alt.txt input100KB.txt[C./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha256 aes-128-ecb[K[K[K[K[K[K[K[K[K[K[Kdes3
+bob_priv.txt
+alice_pub.txt
+16
+des3
+32
+Confidentiality, Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ diff alt.txt input100KB.txt 
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make clean
+rm lab2 alt.txt out100KB.bin
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make cleandiff alt.txt input100KB.txt ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha256 des3[9@CreateMail COAI alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[Kbf-ecb
+bash: ./lab2: No such file or directory
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make
+gcc -w -o lab2 lab2.c -L/usr/local/lib -lssl -lcrypto
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ make./lab2 CreateMail COAI alice bob input100KB.txt out100KB.bin sha256 bf-ecb
+bob_pub.txt
+alice_priv.txt
+256
+256
+bf
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 CreateMail COAI alice bob input100KB.txt out100KB.bin sha256 bf-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake[K./lab2 CreateMail COAI alice bob input100KB.txt out100KB.bin sha256 bf-ecb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake clean[Kdiff alt.txt input100KB.txt ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha256 des3[K[K[K[Kbf-ecb
+bob_priv.txt
+alice_pub.txt
+16
+bf
+32
+Confidentiality, Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha256 bf-ecb[K[K[K[K[K[Kdes3
+bob_priv.txt
+alice_pub.txt
+16
+des3
+140118169806592:error:06065064:digital envelope routines:EVP_DecryptFinal_ex:bad decrypt:crypto/evp/evp_enc.c:535:
+Aborted (core dumped)
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha256 des3[K[K[K[Kaes-128-ecb
+bob_priv.txt
+alice_pub.txt
+16
+aes
+139674799748864:error:06065064:digital envelope routines:EVP_DecryptFinal_ex:bad decrypt:crypto/evp/evp_enc.c:535:
+Aborted (core dumped)
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 ReadMail COAI alice bob out100KB.bin alt.txt sha256 aes-128-ecb[1P[1P[1P[1P[1P[1@p[1@r[1@e[1@m
+bob_priv.txt
+prem_pub.txt
+16
+aes
+140315234899712:error:06065064:digital envelope routines:EVP_DecryptFinal_ex:bad decrypt:crypto/evp/evp_enc.c:535:
+Aborted (core dumped)
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ ./lab2 ReadMail COAI prem bob out100KB.bin alt.txt sha256 aes-128-ecb[1@alice[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pdes3bf-ecb[9@CreateMail COAI alice bob input100KB.txt out100KB.bin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9PReadMail COAI alice bob out100KB.bin alt.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+bob_priv.txt
+alice_pub.txt
+16
+bf
+32
+Confidentiality, Authentication & Integrity successful!
+]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ [H[2J]0;prem@premkrishnaa: ~/7th sem/network security/lab2[01;32mprem@premkrishnaa[00m:[01;34m~/7th sem/network security/lab2[00m$ exit
+
+Script done on Sunday 10 September 2017 06:39:11 PM IST
